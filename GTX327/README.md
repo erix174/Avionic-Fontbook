@@ -9,13 +9,13 @@ square, and nothing is meant to be smoothed or anti-aliased.
 | File | Height | Advance | Use |
 |---|---|---|---|
 | `GTX327RasterSmall-Regular.ttf` | 7 rows | 6 (see below) | labels, titles, mode and IDENT text |
-| `GTX327RasterMedium-Regular.ttf` | 12 rows | 9 for digits, 3 for the colon, 5 for the space | altitude and HH:MM:SS timer values |
+| `GTX327RasterMedium-Regular.ttf` | 12 rows | 9 for digits and `-`, 3 for the colon, 5 for the space | altitude and HH:MM:SS timer values |
 | `GTX327RasterLarge-Regular.ttf` | 27-row cell | 18 | the four-digit squawk code |
 
 **Small font**
-- A-Z, a-z and 0-9 advance 6. Lowercase sits on the baseline, with no
-  descenders.
-- Other advances: `i j l ( )` 4, `. :` 3, space 3.
+- Advance 6 for A-Z, a-z and 0-9, except `i j l ( )` 4. `. :` and space
+  advance 3.
+- Lowercase sits on the baseline, with no descenders.
 - Private-use symbols:
 
 | Code point | Symbol |
@@ -29,8 +29,7 @@ square, and nothing is meant to be smoothed or anti-aliased.
 | U+E006 | copyright sign |
 
 **Large font**
-- The digits sit in a 27-row cell. 0, 1, 3, 4, 5 and 7 are 23 rows tall; 2, 6,
-  8 and 9 are 24.
+- The digits sit in a 27-row cell. Every digit is 23 rows tall.
 - `-` is the low entry dash shown while a code is being typed.
 
 ## Grid
@@ -49,14 +48,19 @@ figures: the 200 x 33 display bitmaps in the GTX 327 Installation Manual
 
 - **Small:** A B C D E F H I K L M N O P Q R S T U V Y 0 1 2 3 4 5 8, the space
   width, and the monospaced I.
-- **Medium:** 0 1 3 5 6, the colon, and its spacing.
+- **Medium:** 0 1 2 3 5 6, the colon, and its spacing.
 - **Large:** 1 3 4 5 7.
 
-The remaining glyphs follow the same style but have no exact Garmin source.
-The large 2, 6, 8 and 9 in particular are older drafts and may be redrawn.
+Garmin's large digits are its medium design drawn bigger; the 3 and 5, exact
+at both sizes, confirm this. So the large 0, 2 and 6 follow Garmin's exact
+medium 0, 2 and 6, built from parts of the exact large 3, 4, 5 and 7. The large 8 and 9 have no Garmin
+source at any size; 8 is the 3 made symmetric and 9 is the 6 turned 180
+degrees. The remaining glyphs follow the same style but have no exact Garmin
+source.
 
-The real unit also uses a bold 7-row face for some annunciators (for example
-ALT and FL). It is not part of this set yet.
+The real unit also draws a few annunciators (for example ALT and FL) and its
+installer configuration values in bold faces. This set deliberately uses one
+face for all text.
 
 Garmin and GTX are trademarks of Garmin Ltd. or its subsidiaries. These fonts
 are an independent recreation and are not affiliated with or endorsed by
